@@ -6,13 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:hint="Nome Completo"
+        android:inputType="text"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/etNota1"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+         />
+
+    <EditText
+        android:id="@+id/etNota1"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:hint="Nota 1o Semestre"
+        android:inputType="number"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etNota2" />
+
+    <EditText
+        android:id="@+id/etNota2"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:hint="Nota 2o Semestre"
+        android:inputType="number"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etMedia"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:hint="Média Necessária"
+        android:inputType="number"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNota2" />
+
+    <Button
+        android:id="@+id/btCalculo"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:onClick="calcular"
+        android:text="Calcular"
+        android:textColor="#424242"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etMedia" />
+
     <TextView
+        android:id="@+id/tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="50sp"
+        android:paddingLeft="20sp"
+        android:textSize="25sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btCalculo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
