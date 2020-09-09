@@ -30,14 +30,17 @@ class MainActivity : AppCompatActivity() {
             val corAprovado = "#2e8b57"
 
             val fraseReprovado =
-                "Olá $nome, sua média foi ${String.format("%.2f", mediaFinal)}. Você está reprovado"
-            val fraseNaMedia =
-                "Olá $nome, sua média foi ${String.format(
+                "Olá $nome, a média necessária é $mediaNecessaria, sua média foi ${String.format(
                     "%.2f",
                     mediaFinal
-                )}. Você está aprovado, mas passou raspando!"
+                )}. Você está reprovado. Que pena :("
+            val fraseNaMedia =
+                "Olá $nome, a média necessária é $mediaNecessaria, sua média foi ${String.format(
+                    "%.2f",
+                    mediaFinal
+                )}. Você está aprovado, mas passou raspando! Estude mais."
             val fraseAprovado =
-                "Olá $nome, sua média foi ${String.format(
+                "Olá $nome, a média necessária é $mediaNecessaria, sua média foi ${String.format(
                     "%.2f",
                     mediaFinal
                 )}. Você está aprovado. Parabéns!"
