@@ -12,23 +12,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculadora"
-        android:textSize="30sp"
         android:textColor="#527CBC"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/etSubtitulo"
-        app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"/>
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etSubtitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50sp"
         android:text="Aprovados e Reprovados"
-        android:textSize="20sp"
+        android:textStyle="italic"
         android:textColor="#B9527CBC"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/etNome"
-        app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
-        android:layout_marginBottom="50sp"/>
+        app:layout_constraintRight_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etNome"
@@ -79,10 +81,13 @@
         android:id="@+id/btCalculo"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#527CBC"
         android:onClick="calcular"
         android:text="Calcular"
-        android:textColor="#424242"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30sp"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etMedia" />
