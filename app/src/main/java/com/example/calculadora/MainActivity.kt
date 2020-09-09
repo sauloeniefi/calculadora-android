@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
         } else {
             val nome = etNome.text.toString()
-            val nota1 = etNota1.text.toString().toInt()
-            val nota2 = etNota2.text.toString().toInt()
-            val mediaNecessaria = etMedia.text.toString().toInt()
-            val mediaFinal = (nota1 + nota2) / 2
+            val nota1: Double = etNota1.text.toString().toDouble()
+            val nota2: Double = etNota2.text.toString().toDouble()
+            val mediaNecessaria: Double = etMedia.text.toString().toDouble()
+            val mediaFinal: Double = (nota1 + nota2) / 2.0
 
             val corReprovado = "#933d41"
             val corNaMedia = "#daa520"
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                     tvResultado.setTextColor(Color.parseColor(corReprovado))
                     tvResultado.visibility = View.VISIBLE
                 } else if (mediaFinal == mediaNecessaria) {
-                    if (mediaNecessaria == 10) {
+                    if (mediaNecessaria == 10.0) {
                         tvResultado.text = fraseAprovado
                         tvResultado.setTextColor(Color.parseColor(corAprovado))
                         tvResultado.visibility = View.VISIBLE
