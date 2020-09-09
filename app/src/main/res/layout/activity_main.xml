@@ -8,6 +8,29 @@
 
 
     <EditText
+        android:id="@+id/etTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora"
+        android:textSize="30sp"
+        android:textColor="#527CBC"
+        app:layout_constraintBottom_toTopOf="@id/etSubtitulo"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"/>
+
+    <EditText
+        android:id="@+id/etSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aprovados e Reprovados"
+        android:textSize="20sp"
+        android:textColor="#B9527CBC"
+        app:layout_constraintBottom_toTopOf="@id/etNome"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_marginBottom="50sp"/>
+
+    <EditText
         android:id="@+id/etNome"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
@@ -16,8 +39,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/etNota1"
         app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintRight_toLeftOf="parent"
-         />
+        app:layout_constraintRight_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etNota1"
@@ -26,9 +48,9 @@
         android:hint="Nota 1o Semestre"
         android:inputType="number"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/etNota2"
         app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/etNota2" />
+        app:layout_constraintRight_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etNota2"
@@ -37,10 +59,10 @@
         android:hint="Nota 2o Semestre"
         android:inputType="number"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="parent" />
 
     <EditText
         android:id="@+id/etMedia"
