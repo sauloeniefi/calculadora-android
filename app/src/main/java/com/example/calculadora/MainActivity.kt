@@ -29,11 +29,18 @@ class MainActivity : AppCompatActivity() {
             val corNaMedia = "#daa520"
             val corAprovado = "#2e8b57"
 
-            val fraseReprovado = "Olá $nome, sua média foi $mediaFinal. Você está reprovado"
+            val fraseReprovado =
+                "Olá $nome, sua média foi ${String.format("%.2f", mediaFinal)}. Você está reprovado"
             val fraseNaMedia =
-                "Olá $nome, sua média foi $mediaFinal. Você está aprovado, mas passou raspando!"
+                "Olá $nome, sua média foi ${String.format(
+                    "%.2f",
+                    mediaFinal
+                )}. Você está aprovado, mas passou raspando!"
             val fraseAprovado =
-                "Olá $nome, sua média foi $mediaFinal. Você está aprovado. Parabéns!"
+                "Olá $nome, sua média foi ${String.format(
+                    "%.2f",
+                    mediaFinal
+                )}. Você está aprovado. Parabéns!"
 
             if (mediaNecessaria > 10 || nota1 > 10 || nota2 > 10) {
                 Toast.makeText(this, "Apenas valores entre 0 e 10", Toast.LENGTH_SHORT).show()
