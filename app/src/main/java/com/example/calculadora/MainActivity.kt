@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             val fraseAprovado =
                 "Olá $nome, sua média foi $mediaFinal. Você está aprovado. Parabéns!"
 
-            if (mediaNecessaria > 10) {
+            if (mediaNecessaria > 10 || nota1 > 10 || nota2 > 10) {
                 Toast.makeText(this, "Apenas valores entre 0 e 10", Toast.LENGTH_SHORT).show()
                 tvResultado.visibility = View.GONE
             } else {
